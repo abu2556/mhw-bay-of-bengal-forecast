@@ -4,7 +4,7 @@ title: "Evaluation of 1-14-Day Machine-Learning Forecasts of Marine Heatwaves in
 type: software
 authors:
   - family-names: "Mojumder"
-    given-names: "Abu Baser"
+    given-names: "Abu Basir"
     affiliation: "Department of Meteorology, University of Dhaka"
 date-released: "2026-11-07"
 doi: 10.5281/zenodo.24030524
@@ -21,7 +21,7 @@ preferred-citation:
   title: "Evaluation of 1-14-Day Machine-Learning Forecasts of Marine Heatwaves in the Northern Bay of Bengal Against Persistence Benchmarks"
   authors:
     - family-names: "Mojumder"
-      given-names: "Abu Baser"
+      given-names: "Abu Basir"
   year: 2026
   thesis-type: "B.S. project"
   institution:
