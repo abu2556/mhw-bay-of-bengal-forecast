@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Abu Baser Mojumder
+Copyright (c) 2026 Abu Basir Mojumder
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,4 +23,4 @@ SOFTWARE.
 ---
 This licence covers the code in notebooks/. The files in data/ and
 results/tables/ are licensed under CC BY 4.0, and the thesis and figures are
-(c) Abu Baser Mojumder, all rights reserved; see README.md.
+(c) Abu Basir Mojumder, all rights reserved; see README.md.
