@@ -1,0 +1,33 @@
+labels,response,predictor (year before),Spearman r,p,LOYO r range,Pearson r,Pearson p
+detrended,days_FebDec,ONI NDJ,0.4,0.008,+0.36 to +0.46,0.51,0.0
+detrended,days_FebDec,Nino 3.4 NDJ,0.39,0.009,+0.35 to +0.46,0.5,0.001
+detrended,days_FebDec,DMI SON,0.26,0.095,+0.20 to +0.30,0.4,0.007
+detrended,days_FebDec,DMI SON | Nino 3.4,0.05,0.776,-0.02 to +0.10,0.13,0.412
+detrended,events_FebDec,ONI NDJ,0.4,0.008,+0.36 to +0.46,0.52,0.0
+detrended,events_FebDec,Nino 3.4 NDJ,0.39,0.011,+0.34 to +0.45,0.51,0.0
+detrended,events_FebDec,DMI SON,0.18,0.252,+0.12 to +0.22,0.28,0.067
+detrended,events_FebDec,DMI SON | Nino 3.4,-0.06,0.728,-0.13 to -0.01,-0.07,0.675
+detrended,days_MAMJ,ONI NDJ,0.47,0.001,+0.43 to +0.53,0.53,0.0
+detrended,days_MAMJ,Nino 3.4 NDJ,0.47,0.001,+0.43 to +0.53,0.53,0.0
+detrended,days_MAMJ,DMI SON,0.31,0.042,+0.26 to +0.37,0.39,0.011
+detrended,days_MAMJ,DMI SON | Nino 3.4,0.06,0.724,-0.00 to +0.13,0.07,0.645
+detrended,events_MAMJ,ONI NDJ,0.55,0.0,+0.52 to +0.61,0.62,0.0
+detrended,events_MAMJ,Nino 3.4 NDJ,0.55,0.0,+0.51 to +0.61,0.61,0.0
+detrended,events_MAMJ,DMI SON,0.37,0.016,+0.32 to +0.42,0.43,0.004
+detrended,events_MAMJ,DMI SON | Nino 3.4,0.08,0.621,+0.02 to +0.13,0.06,0.695
+raw,days_FebDec,ONI NDJ,0.24,0.114,+0.19 to +0.30,0.25,0.105
+raw,days_FebDec,Nino 3.4 NDJ,0.22,0.15,+0.17 to +0.27,0.23,0.133
+raw,days_FebDec,DMI SON,0.19,0.221,+0.13 to +0.25,0.29,0.064
+raw,days_FebDec,DMI SON | Nino 3.4,0.08,0.62,+0.03 to +0.13,0.18,0.248
+raw,events_FebDec,ONI NDJ,0.28,0.064,+0.24 to +0.34,0.31,0.045
+raw,events_FebDec,Nino 3.4 NDJ,0.27,0.083,+0.22 to +0.32,0.29,0.056
+raw,events_FebDec,DMI SON,0.14,0.386,+0.07 to +0.20,0.25,0.104
+raw,events_FebDec,DMI SON | Nino 3.4,-0.02,0.892,-0.08 to +0.03,0.09,0.585
+raw,days_MAMJ,ONI NDJ,0.3,0.051,+0.25 to +0.35,0.31,0.047
+raw,days_MAMJ,Nino 3.4 NDJ,0.29,0.061,+0.24 to +0.34,0.3,0.054
+raw,days_MAMJ,DMI SON,0.26,0.088,+0.21 to +0.33,0.29,0.057
+raw,days_MAMJ,DMI SON | Nino 3.4,0.13,0.429,+0.07 to +0.19,0.14,0.373
+raw,events_MAMJ,ONI NDJ,0.3,0.052,+0.25 to +0.35,0.26,0.091
+raw,events_MAMJ,Nino 3.4 NDJ,0.29,0.056,+0.25 to +0.35,0.25,0.101
+raw,events_MAMJ,DMI SON,0.25,0.101,+0.20 to +0.32,0.26,0.092
+raw,events_MAMJ,DMI SON | Nino 3.4,0.11,0.489,+0.05 to +0.17,0.13,0.403

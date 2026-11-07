@@ -1,0 +1,15 @@
+# The notebooks were run on Google Colab (Python 3, scikit-learn 1.6-1.8).
+# Colab already has most of these; the notebooks install the rest when needed.
+numpy
+pandas
+scipy
+xarray
+netCDF4
+scikit-learn>=1.6
+xgboost
+matplotlib
+cartopy
+requests
+cdsapi>=0.7.4
+copernicusmarine
+eccodes

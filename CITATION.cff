@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+title: "Evaluation of 1-14-Day Machine-Learning Forecasts of Marine Heatwaves in the Northern Bay of Bengal Against Persistence Benchmarks"
+type: software
+authors:
+  - family-names: "Mojumder"
+    given-names: "Abu Baser"
+    affiliation: "Department of Meteorology, University of Dhaka"
+date-released: "2026-11-07"
+license: MIT
+keywords:
+  - marine heatwaves
+  - Bay of Bengal
+  - machine learning
+  - forecast verification
+  - persistence
+  - sea surface temperature
+preferred-citation:
+  type: thesis
+  title: "Evaluation of 1-14-Day Machine-Learning Forecasts of Marine Heatwaves in the Northern Bay of Bengal Against Persistence Benchmarks"
+  authors:
+    - family-names: "Mojumder"
+      given-names: "Abu Baser"
+  year: 2026
+  thesis-type: "B.S. project"
+  institution:
+    name: "University of Dhaka"
+  department: "Department of Meteorology"

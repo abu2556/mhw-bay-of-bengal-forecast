@@ -1,0 +1,19 @@
+event onset,lead,forecast,first event day caught (days after onset),event days forecast (%),"false alarms, 30 d before onset"
+1982-09-19,7,logistic (SST),6,84,2
+1982-09-19,7,exceedance persistence,7,80,1
+1982-09-19,7,honest persistence,11,64,0
+1982-09-19,14,logistic (SST),0,78,18
+1982-09-19,14,exceedance persistence,14,68,1
+1982-09-19,14,honest persistence,18,52,0
+1987-11-16,7,logistic (SST),6,88,7
+1987-11-16,7,exceedance persistence,7,91,10
+1987-11-16,7,honest persistence,11,86,5
+1987-11-16,14,logistic (SST),0,100,13
+1987-11-16,14,exceedance persistence,0,87,11
+1987-11-16,14,honest persistence,0,78,6
+2020-06-25,7,logistic (SST),6,88,7
+2020-06-25,7,exceedance persistence,7,82,1
+2020-06-25,7,honest persistence,11,66,1
+2020-06-25,14,logistic (SST),0,76,21
+2020-06-25,14,exceedance persistence,14,68,8
+2020-06-25,14,honest persistence,18,52,7
