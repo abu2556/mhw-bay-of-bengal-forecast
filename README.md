@@ -5,6 +5,7 @@ Code, processed data and results of my B.S. project (thesis), Department of Mete
 **Author:** Abu Baser Mojumder  
 **Supervisor:** Sabista Yildiz, Lecturer, Department of Meteorology, University of Dhaka  
 **Thesis:** see the [`thesis/`](thesis/) folder
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24030524.svg)](https://doi.org/10.5281/zenodo.24030524)
 
 ---
 
@@ -142,7 +143,8 @@ MCC = Matthews correlation coefficient. "det" = labels detected on detrended SST
 
 > Mojumder, A. B. (2026). *Evaluation of 1–14-Day Machine-Learning Forecasts of Marine Heatwaves in the Northern Bay of Bengal Against Persistence Benchmarks*. B.S. project, Department of Meteorology, University of Dhaka.
 
-GitHub also shows a "Cite this repository" button generated from [`CITATION.cff`](CITATION.cff).
+Code, data and results: Mojumder, A. B. (2026). *mhw-bay-of-bengal-forecast*. Zenodo. https://doi.org/10.5281/zenodo.24030524
+
 
 ## Licence
 
