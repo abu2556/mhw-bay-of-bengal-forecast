@@ -4,4 +4,4 @@
 
 Mojumder, A. B. (2026). *Evaluation of 1–14-Day Machine-Learning Forecasts of Marine Heatwaves in the Northern Bay of Bengal Against Persistence Benchmarks*. B.S. project, Department of Meteorology, University of Dhaka. Supervisor: Sabista Yildiz.
 
-© 2026 Abu Baser Mojumder. All rights reserved.
+© 2026 Abu Basir Mojumder. All rights reserved.
