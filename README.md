@@ -2,7 +2,7 @@
 
 Code, processed data and results of my B.S. project (thesis), Department of Meteorology, University of Dhaka (session 2021–22).
 
-**Author:** Abu Baser Mojumder  
+**Author:** Abu Basir Mojumder  
 **Supervisor:** Sabista Yildiz, Lecturer, Department of Meteorology, University of Dhaka  
 **Thesis:** see the [`thesis/`](thesis/) folder
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24030524.svg)](https://doi.org/10.5281/zenodo.24030524)
@@ -150,7 +150,7 @@ Code, data and results: Mojumder, A. B. (2026). *mhw-bay-of-bengal-forecast*. Ze
 
 - **Code** (the notebooks): MIT licence, see [`LICENSE`](LICENSE).
 - **Processed data and result tables** (`data/`, `results/tables/`): Creative Commons Attribution 4.0 (CC BY 4.0). They are derived from the datasets listed above; please also acknowledge those sources. ERA5-derived values contain modified Copernicus Climate Change Service information (2026).
-- **Thesis text and figures** (`thesis/`, `results/figures/`): © 2026 Abu Baser Mojumder, all rights reserved. They may be read and cited.
+- **Thesis text and figures** (`thesis/`, `results/figures/`): © 2026 Abu Basir Mojumder, all rights reserved. They may be read and cited.
 
 ## Acknowledgements
 
