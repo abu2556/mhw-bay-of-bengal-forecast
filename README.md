@@ -3,7 +3,7 @@
 Code, processed data and results of my B.S. project (thesis), Department of Meteorology, University of Dhaka (session 2021–22).
 
 **Author:** Abu Basir Mojumder  
-**Supervisor:** Sabista Yildiz, Lecturer, Department of Meteorology, University of Dhaka  
+**Supervisor:** Shabista Yildiz, Lecturer, Department of Meteorology, University of Dhaka  
 **Thesis:** see the [`thesis/`](thesis/) folder
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24030524.svg)](https://doi.org/10.5281/zenodo.24030524)
 
@@ -29,10 +29,12 @@ Models were evaluated with leave-one-year-out cross-validation (purging, 30-day 
 2. **Models beat honest persistence** at every lead (gain 0.13–0.18 MCC at 1–5 days).
 3. **At 1–3 days almost all of that gain is SST already being above the threshold.** Against exceedance persistence the models add at most about 0.025 MCC.
 4. **Skill beyond exceedance persistence is small** (0.02–0.06 MCC), clearest at about 7 days, and at 10–14 days it depends on the SST product.
-5. **ERA5 predictors did not improve forecasts of new events**, and random forest did not beat logistic regression.
+5. **ERA5 predictors did not improve forecasts of new events**, and random forest was not consistently better than logistic regression.
 6. **With a second SST product (ESA CCI/C3S)** the inflation and the short-lead results are reproduced, but the 10–14-day gain is not; the two products agree on only about half of the MHW days.
-7. **Post-hoc analyses:** an L1 (lasso) selection keeps the Indian Ocean basin-wide warming (IOBW) index at 3–14 days but no predictor significantly improves skill over SST alone; GODAS upper-ocean predictors add no skill at 7–14 days.
-8. **MHW days are more than twice as frequent after El Niño winters** (Spearman r = 0.40 with the previous-winter ONI); the Indian Ocean Dipole has no effect of its own once ENSO is accounted for.
+7. **Post-hoc analyses:** an L1 (lasso) selection keeps the Indian Ocean basin-wide warming (IOBW) index at 3–14 days but improves skill over SST alone only marginally, at 5 days; GODAS upper-ocean predictors add no skill at 7–14 days.
+8. **MHW days are about twice as frequent after El Niño winters as after other winters** (Spearman ρ = 0.40 with the previous-winter ONI, 0.36 with the relative index RONI); the Indian Ocean Dipole has no effect of its own once ENSO is accounted for.
+9. **Real-time (past-only) climatology** (added in v1.1.0): with the trend, climatology and threshold estimated only from earlier years (2002–2025), the inflation and the short-lead results hold, but the gain over exceedance persistence is 0.016 MCC or less and not significant beyond 3 days.
+10. **Labels as model inputs** (added in v1.1.0): giving the logistic SST model the official label of the forecast day raises its MCC by 0.117 at 1 day and 0.028 at 7 days, to the level of label-based persistence – a model inherits the same leak.
 
 ![Inflation of label-based over honest persistence in three regions](results/figures/wp1_leakage_3regions.png)
 
@@ -51,13 +53,16 @@ Models were evaluated with leave-one-year-out cross-validation (purging, 30-day 
 ├── requirements.txt             Python packages
 ├── thesis/                      the final thesis (PDF)
 ├── notebooks/                   the 12 Google Colab notebooks, in run order, with their original outputs
+├── scripts/                     scripts added after the defence (v1.1.0), see below
 ├── data/
 │   └── processed/
 │       ├── predictor_table_1982_2025.csv   daily regional SST, MHW labels, ERA5 means and climate indices
 │       └── godas_box_pentad.csv            GODAS 0–50 m temperature and isothermal-layer depth, box means
 └── results/
     ├── tables/                  every result table behind Chapter 4 (CSV)
-    └── figures/                 main figures (PNG)
+    ├── label_input/             label-as-input test (v1.1.0)
+    ├── past_only/               past-only climatology forecasts and paired test (v1.1.0)
+    └── figures/                 main figures (PNG); figures/manuscript/ = journal-manuscript figures
 ```
 
 ## Notebooks
@@ -79,13 +84,25 @@ Run in this order. Each notebook starts with a short note on what it does, what 
 | 11 | `11_godas_heat_memory` | Upper-ocean heat memory test with GODAS | 3.14, 4.11 |
 | 12 | `12_previous_year_enso_iod` | Previous-year ENSO and IOD vs MHW activity | 3.15, 4.12 |
 
+## Scripts added after the defence (v1.1.0)
+
+Run from the repository root; they need only `data/processed/predictor_table_1982_2025.csv` (plus `scripts/roni_ndj.csv` for the RONI test). `scripts/MHW_revision_analyses_and_figures.ipynb` runs all of them in Colab and checks the numbers against the thesis and manuscript.
+
+| Script | What it does | Thesis | Output |
+|---|---|---|---|
+| `scripts/label_input_test.py` | Logistic SST model with and without the official label of the forecast day as a predictor | 3.4, 4.3.1 | `results/label_input/` |
+| `scripts/roni_test.py` (+ `roni_ndj.csv`) | Previous-winter ENSO test with the relative Oceanic Niño Index (RONI) | 3.15, 4.12 | `results/tables/roni_test_output.txt` |
+| `scripts/past_only_paired_test.py` | Expanding-window forecasts 2002–2025 with past-only and full-record references; paired test | 4.13 | `results/past_only/` |
+| `scripts/figS2_case_studies.py` | Case-study figure and scores (needs the out-of-fold forecasts on Drive) | 4.8 | `results/figures/manuscript/figS2_case_studies.png` |
+| `scripts/make_figures.py` | Journal-manuscript Figs 2, 4, 6, 7 and S3 from `results/tables/` | – | `results/figures/manuscript/` |
+
 ## Data
 
 | Dataset | Use | Source |
 |---|---|---|
 | NOAA OISST v2.1, daily, 0.25° | SST, MHW labels, DMI and IOBW indices | NOAA Physical Sciences Laboratory |
 | ERA5 hourly single levels | t2m, 10 m wind, surface heat fluxes | Copernicus Climate Change Service (C3S) Climate Data Store |
-| Niño 3.4 (ERSST v5) and ONI | ENSO | NOAA Climate Prediction Center |
+| Niño 3.4 (ERSST v5), ONI (ERSST v6) and relative ONI (RONI) | ENSO | NOAA Climate Prediction Center |
 | RMM1, RMM2 | MJO | Australian Bureau of Meteorology |
 | ESA CCI/C3S SST analysis (SST_GLO_SST_L4_REP_OBSERVATIONS_010_024) | second SST product | Copernicus Marine Service |
 | NCEP GODAS pentad fields | upper-ocean temperature, isothermal-layer depth | NOAA Climate Prediction Center |
@@ -136,6 +153,9 @@ All files are in [`results/tables/`](results/tables/).
 | `l1_selection_frequency_by_lead.csv` | selection frequency over the LOYO folds (not used for conclusions, see Section 3.10) |
 | `wp6_godas_heat_memory.csv` | Tables 4.15, A.4 |
 | `wp7_enso_iod_lag.csv`, `wp7_enso_iod_monthly.csv` | Tables 4.16, A.5; Fig. 4.15 |
+| `roni_test_output.txt` | RONI check (Section 4.12) |
+| `../label_input/label_input_test.csv` | label-as-input test (Section 4.3.1) |
+| `../past_only/paired_test.csv` | Table 4.17 and the paired test (Section 4.13) |
 
 MCC = Matthews correlation coefficient. "det" = labels detected on detrended SST (main target), "raw" = labels on raw SST. Intervals are 95% year-block bootstrap confidence intervals (2000 resamples).
 
@@ -148,10 +168,10 @@ Code, data and results: Mojumder, A. B. (2026). *mhw-bay-of-bengal-forecast*. Ze
 
 ## Licence
 
-- **Code** (the notebooks): MIT licence, see [`LICENSE`](LICENSE).
+- **Code** (the notebooks and scripts): MIT licence, see [`LICENSE`](LICENSE).
 - **Processed data and result tables** (`data/`, `results/tables/`): Creative Commons Attribution 4.0 (CC BY 4.0). They are derived from the datasets listed above; please also acknowledge those sources. ERA5-derived values contain modified Copernicus Climate Change Service information (2026).
 - **Thesis text and figures** (`thesis/`, `results/figures/`): © 2026 Abu Basir Mojumder, all rights reserved. They may be read and cited.
 
 ## Acknowledgements
 
-NOAA Physical Sciences Laboratory (OISST), the Copernicus Climate Change Service and ECMWF (ERA5), the ESA Climate Change Initiative and the Copernicus Marine Service (CCI/C3S SST), the NOAA Climate Prediction Center (Niño 3.4, ONI, GODAS) and the Australian Bureau of Meteorology (RMM index).
+NOAA Physical Sciences Laboratory (OISST), the Copernicus Climate Change Service and ECMWF (ERA5), the ESA Climate Change Initiative and the Copernicus Marine Service (CCI/C3S SST), the NOAA Climate Prediction Center (Niño 3.4, ONI, RONI, GODAS) and the Australian Bureau of Meteorology (RMM index).

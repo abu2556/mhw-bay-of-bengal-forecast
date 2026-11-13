@@ -6,7 +6,8 @@ authors:
   - family-names: "Mojumder"
     given-names: "Abu Basir"
     affiliation: "Department of Meteorology, University of Dhaka"
-date-released: "2026-11-07"
+version: "1.1.0"
+date-released: "2026-11-14"
 doi: 10.5281/zenodo.24030524
 license: MIT
 keywords:

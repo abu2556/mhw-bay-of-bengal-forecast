@@ -1,0 +1,15 @@
+                            Spearman      p      LOYO range Pearson
+mhw_detrended days_FebDec       0.36  0.018  +0.31 to +0.43    0.45
+              events_FebDec     0.37  0.015  +0.32 to +0.44    0.47
+              days_MAMJ         0.48  0.001  +0.44 to +0.54     0.5
+              events_MAMJ       0.56    0.0  +0.52 to +0.62    0.58
+mhw_raw       days_FebDec       0.12  0.425  +0.07 to +0.18    0.09
+              events_FebDec     0.17  0.266  +0.12 to +0.23    0.16
+              days_MAMJ         0.19  0.215  +0.15 to +0.24    0.16
+              events_MAMJ        0.2  0.196  +0.15 to +0.25    0.13
+         mean  count
+La Nina  16.1     18
+Neutral  23.4     11
+El Nino  37.7     14
+Mann-Whitney one-sided p = 0.04
+top-5 years: {1998: (107, 2.3, 'El Nino'), 1987: (97, 1.4, 'El Nino'), 2020: (81, 0.2, 'Neutral'), 1988: (66, 0.8, 'El Nino'), 2010: (61, 1.5, 'El Nino')}
